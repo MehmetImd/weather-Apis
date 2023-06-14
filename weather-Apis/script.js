@@ -40,6 +40,7 @@ const displayResult = (result) => {
 
             <div class="item city-name">${result.name} ${result.sys.country}</div>
             <div class="item city-weather">${(result.main.temp).toFixed(1)}°C</div>
+            
             <div class="item weather-forecast">${result.weather[0].main}</div>
 
         </div>
@@ -52,7 +53,10 @@ const displayResult = (result) => {
 
 function errorDisplay(){
     document.querySelector(".error-msj").style.opacity=1;
+    
     setTimeout(function() {
+        
         document.querySelector(".error-msj").style.opacity=0;
+        
     },3000)
 }
